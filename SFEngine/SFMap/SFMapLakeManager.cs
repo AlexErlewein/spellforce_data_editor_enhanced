@@ -1,4 +1,4 @@
-﻿using NAudio.Gui;
+﻿
 using OpenTK.Mathematics;
 using SFEngine.SF3D;
 using System.Collections.Generic;

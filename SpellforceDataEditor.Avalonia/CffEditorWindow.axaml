@@ -1,0 +1,20 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="SpellforceDataEditor.Avalonia.CffEditorWindow"
+        Title="CFF Editor">
+    <DockPanel>
+        <Grid ColumnDefinitions="350,*,350">
+            <DockPanel Grid.Column="0">
+                <ComboBox DockPanel.Dock="Top" Name="CategorySelect"/>
+                <ListBox Name="ElementSelect"/>
+            </DockPanel>
+            <DockPanel Grid.Column="1">
+                <Button DockPanel.Dock="Bottom" Name="SaveFileButton" Content="Save Changes"/>
+                <DataGrid Name="ItemDataGrid" AutoGenerateColumns="True"/>
+            </DockPanel>
+        </Grid>
+    </DockPanel>
+</Window>

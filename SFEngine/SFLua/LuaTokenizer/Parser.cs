@@ -5,12 +5,7 @@ using System.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Windows.ApplicationModel.Background;
-using Windows.Devices.PointOfService;
-using Windows.Data.Text;
-using System.Configuration;
-using System.Windows.Forms;
-using Windows.Media.Playback;
+
 using System.Linq.Expressions;
 
 namespace SFEngine.SFLua.LuaTokenizer

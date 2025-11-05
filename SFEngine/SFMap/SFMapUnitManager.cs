@@ -2,7 +2,7 @@
 using SFEngine.SF3D;
 using System;
 using System.Collections.Generic;
-using Windows.Gaming.Input;
+
 
 namespace SFEngine.SFMap
 {

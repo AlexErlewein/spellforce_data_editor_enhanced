@@ -29,6 +29,8 @@ namespace SpellforceDataEditor
 
         public MainForm()
         {
+            SFEngine.SFLua.SFLuaEnvironment.MessageBoxService = new MessageBoxService();
+
             SFEngine.SFLua.LuaTokenizer.Parser parser = new(
                 File.ReadAllText("C:\\Users\\lesze\\Documents\\Visual Studio 2015\\Projects\\SpellForce1\\main\\redist\\script\\P63\\n0.lua"));
 

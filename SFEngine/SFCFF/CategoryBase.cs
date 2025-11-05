@@ -10,10 +10,10 @@ using System.Threading.Tasks;
 using System.Runtime.CompilerServices;
 using System.Numerics;
 using System.Reflection.Metadata.Ecma335;
-using System.Windows.Forms;
+
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Diagnostics.Metrics;
-using Windows.UI.Composition.Interactions;
+
 using SFEngine.SFLua.LuaDecompiler;
 using OpenTK.Windowing.Common.Input;
 using System.Reflection.Metadata;

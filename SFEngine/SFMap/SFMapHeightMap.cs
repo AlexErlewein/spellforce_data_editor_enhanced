@@ -4,7 +4,7 @@ using SFEngine.SF3D;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using NAudio.Gui;
+
 using System.Runtime.InteropServices;
 
 namespace SFEngine.SFMap

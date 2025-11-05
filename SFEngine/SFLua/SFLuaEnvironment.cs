@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Text;
-using System.Windows.Forms;
 
 namespace SFEngine.SFLua
 {
     public static class SFLuaEnvironment
     {
+        public static IMessageBoxService MessageBoxService { get; set; }
+
         public static bool data_loaded { get; private set; } = false;
         public static lua_sql.SFLuaSQL<lua_sql.SFMapCoopSpawnTypeInfo> coop_spawns { get; private set; } = new lua_sql.SFLuaSQL<lua_sql.SFMapCoopSpawnTypeInfo>() { script_name = "script\\gdsrtscoopspawngroups.lua" };
         public static lua_sql.SFLuaSQL<lua_sql.SFLuaSQLItemData> items { get; private set; } = new lua_sql.SFLuaSQL<lua_sql.SFLuaSQLItemData>() { script_name = "script\\sql_item.lua" };
@@ -163,7 +164,7 @@ namespace SFEngine.SFLua
                 int result = GetDecompiledString(fname, ref ret);
                 if (result == -2)
                 {
-                    if (MessageBox.Show("Script does not exist. Create a new script?", "Script not found", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    if (MessageBoxService.Show("Script does not exist. Create a new script?", "Script not found", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
                         FileInfo fo = new FileInfo(SFUnPak.SFUnPak.game_directory_name + "\\" + fname);
                         fo.Directory.Create();
@@ -208,7 +209,7 @@ namespace SFEngine.SFLua
                 int result = GetDecompiledString(fname, ref ret);
                 if (result == -2)
                 {
-                    if (MessageBox.Show("Script does not exist. Create a new script?", "Script not found", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    if (MessageBoxService.Show("Script does not exist. Create a new script?", "Script not found", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
                         if (!Directory.Exists(SFUnPak.SFUnPak.game_directory_name + "\\script"))
                         {
