@@ -1,0 +1,31 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="400"
+        x:Class="SpellforceDataEditor.Avalonia.AboutWindow"
+        Title="About Spellforce Data Editor">
+    <ScrollViewer>
+        <StackPanel Margin="20" Spacing="10">
+            <TextBlock FontSize="16" FontWeight="Bold" Text="Spellforce Data Editor"/>
+
+            <TextBlock TextWrapping="Wrap" Text="...is a set of tools which allow you to modify SpellForce to your liking. It includes gamedata editor, map editor, and much more.&#x0a;&#x0a;Originally created by Insigar from spellforcefanforum, completely redone and currently maintained by me, creator of this tool."/>
+
+            <Separator/>
+
+            <TextBlock FontWeight="Bold" Text="Links of semi-importance:"/>
+
+            <Button Name="ManualLinkButton" Content="SpellForce Editor manual" HorizontalAlignment="Left" Background="Transparent" BorderThickness="0"/>
+            <TextBlock Text="An up-to-date manual for most of this program's capabilities" FontSize="11" Foreground="Gray"/>
+
+            <Button Name="DiscordLinkButton" Content="SpellForce Community Discord" HorizontalAlignment="Left" Background="Transparent" BorderThickness="0"/>
+            <TextBlock Text="Where you can find a SF1 modding community among other things" FontSize="11" Foreground="Gray"/>
+
+            <Separator/>
+
+            <TextBlock TextWrapping="Wrap" Text="In case you find a bug or want some feature added/improved upon, contact me:&#x0a;on Discord: shovelknight&#x0a;on NexusMods:"/>
+
+            <Button Name="NexusLinkButton" Content="my profile" HorizontalAlignment="Left" Background="Transparent" BorderThickness="0"/>
+        </StackPanel>
+    </ScrollViewer>
+</Window>

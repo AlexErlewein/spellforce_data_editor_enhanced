@@ -2,11 +2,33 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="300"
         x:Class="SpellforceDataEditor.Avalonia.MainWindow"
-        Title="SpellforceDataEditor.Avalonia">
-    <DockPanel>
-        <Button DockPanel.Dock="Top" Content="GameData Editor" Name="GameDataEditorButton"/>
-        <Button DockPanel.Dock="Top" Content="Load CFF File" Name="LoadCffFileButton"/>
+        Title="Spellforce Data Editor">
+    <DockPanel Margin="20">
+        <TextBlock DockPanel.Dock="Top" Text="Select tools to run! Closing this window will close all running tools." TextWrapping="Wrap" Margin="0,0,0,20"/>
+
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,0,0,10">
+            <Button Content="GameData Editor" Name="GameDataEditorButton" Width="140" Margin="0,0,10,0"/>
+            <Button Content="Load CFF File" Name="LoadCffFileButton" Width="140"/>
+        </StackPanel>
+
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,0,0,10">
+            <Button Content="Asset Viewer" Name="AssetViewerButton" Width="140" Margin="0,0,10,0" Foreground="Red"/>
+            <Button Content="Map Editor" Name="MapEditorButton" Width="140" Margin="0,0,10,0" Foreground="Red"/>
+            <Button Content="SQL Modifier" Name="SqlModifierButton" Width="140" Foreground="Red"/>
+        </StackPanel>
+
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,0,0,10">
+            <Button Content="Specify game dir..." Name="SpecifyGameDirButton" Width="140" Margin="0,0,10,0" Foreground="Red"/>
+            <Button Content="About" Name="AboutButton" Width="140"/>
+        </StackPanel>
+
+        <TextBlock DockPanel.Dock="Top" Text="Crimson features require specified game directory" Foreground="Red" Margin="0,0,0,20"/>
+
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Stretch">
+            <TextBlock Name="GameDirStatusLabel" Text="Game directory: Not specified" VerticalAlignment="Center" Margin="0,0,20,0"/>
+            <TextBlock Name="VersionLabel" Text="Version: 01.08.2024.1" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+        </StackPanel>
     </DockPanel>
 </Window>

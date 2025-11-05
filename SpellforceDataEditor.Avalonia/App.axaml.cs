@@ -9,6 +9,7 @@ public partial class App : Application
     public override void Initialize()
     {
         AvaloniaXamlLoader.Load(this);
+        Name = "Spellforce Data Editor";
     }
 
     public override void OnFrameworkInitializationCompleted()
